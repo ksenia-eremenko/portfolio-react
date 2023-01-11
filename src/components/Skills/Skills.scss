@@ -1,0 +1,49 @@
+.skills {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        @include nb {
+            grid-gap: 15px;
+        }
+
+        @include tbmb {
+            grid-gap: 10px;
+        }
+
+        @include mb {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &:not(:first-child) {
+            margin-top: 25px;
+
+            @include nb {
+                margin-top: 20px;
+            }
+
+            @include tbmb {
+                margin-top: 15px;
+            }
+
+            .item {
+                padding: 15px;
+                border-radius: 3px;
+                background: $color1;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                @include mb {
+                    gap: 10px;
+                }
+
+                .n {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+}

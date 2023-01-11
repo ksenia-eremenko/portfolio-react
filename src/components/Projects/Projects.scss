@@ -1,0 +1,80 @@
+.projects {
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+        @include nb {
+            grid-gap: 15px;
+        }
+
+        @include tbmb {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mb {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &:not(:first-child) {
+            margin-top: 25px;
+
+            @include nb {
+                margin-top: 20px;
+            }
+
+            @include tbmb {
+                margin-top: 15px;
+            }
+        }
+
+        .item {
+            text-decoration: none;
+            .image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    @include animate;
+                }
+            }
+
+            .info {
+                padding-left: 10px;
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+
+                .info_title {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 600;
+                    color: rgba($color2, 0.7);
+                }
+
+                .info_subtitle {
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $color2;
+
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &:hover {
+                .image {
+                    img {
+                        transform: scale(1.03);
+                    }
+                }
+            }
+        }
+    }
+}

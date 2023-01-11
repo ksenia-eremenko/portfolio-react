@@ -1,0 +1,63 @@
+.contacts {
+    .in {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+
+        @include nb {
+            gap: 50px;
+        }
+
+        @include tb {
+            gap: 20px;
+        }
+
+        @include mb {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        &:not(:first-child) {
+            @include mb {
+                margin-top: 10px;
+            }
+        }
+
+        .left {
+            width: 40%;
+
+            @include nbtb {
+                width: 45%;
+            }
+
+            @include mb {
+                width: 100%;
+            }
+
+            .text-in {
+                &:not(:first-child) {
+                    margin-top: 20px;
+
+                    @include mb {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 40%;
+
+            @include nbtb {
+                width: 55%;
+            }
+
+            @include mb {
+                width: 100%;
+            }
+        }
+    }
+}

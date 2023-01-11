@@ -1,0 +1,29 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.content {
+  margin-left: 240px;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  padding: 20px 40px 20px 0;
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    margin-left: 230px;
+    padding: 20px 30px 20px 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    margin-left: 195px;
+    padding: 15px 15px 15px 0;
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-left: 0;
+    min-height: auto;
+    padding: 10px;
+  }
+}
