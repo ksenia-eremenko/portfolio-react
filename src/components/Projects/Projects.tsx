@@ -131,13 +131,12 @@ const Projects = () => {
             <div className="items">
                 {items.map((e, i) => {
                     return (
-                        <a href="/" className="item" key={i}>
+                        <a href={e.url} className="item" key={i} target="_blank" rel="noreferrer">
                             <div className="image">
                                 <img src={e.image} alt="" />
                             </div>
                             <div className="info">
                                 <div className="info_title">{e.subtitle}</div>
-                                {/* <div className="info_subtitle">{e.title}</div> */}
                             </div>
                         </a>
                     )

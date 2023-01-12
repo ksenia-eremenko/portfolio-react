@@ -20,10 +20,10 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<TopBlock />} />
-          <Route path="/home" element={<TopBlock />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/home/" element={<TopBlock />} />
+          <Route path="/skills/" element={<Skills />} />
+          <Route path="/projects/" element={<Projects />} />
+          <Route path="/contacts/" element={<Contacts />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
